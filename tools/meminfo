@@ -1,0 +1,5 @@
+#!/bin/bash
+
+echo "/proc/sys/vm/overcommit_memory -> $(cat /proc/sys/vm/overcommit_memory)"
+echo "/proc/sys/vm/oom_kill_allocating_task -> $(cat /proc/sys/vm/oom_kill_allocating_task)"
+echo "/proc/sys/vm/oom_dump_tasks -> $(cat /proc/sys/vm/oom_dump_tasks)"

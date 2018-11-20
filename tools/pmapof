@@ -1,0 +1,4 @@
+#!/bin/bash
+
+tpid=$(pidof $1)
+watch -n 2 sudo pmap $tpid \| grep anon

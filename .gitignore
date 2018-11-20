@@ -1,0 +1,7 @@
+*.scap
+*.log
+malloc-stats-1
+malloc-stats-2
+malloc-stats-3
+malloc-test-libc-alpha
+malloc-test-uclibc

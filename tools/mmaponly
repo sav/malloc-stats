@@ -1,0 +1,9 @@
+#!/bin/bash
+
+PATH=$PATH:.
+
+export MALLOC_ARENA_MAX=0
+export MALLOC_ARENA_TEST=0
+export MALLOC_MMAP_THRESHOLD_=$(( 128 ))
+
+strace -C $*

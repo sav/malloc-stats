@@ -1,0 +1,13 @@
+#!/bin/bash
+set -e
+
+PID=$(pidof $1)
+test -n "$PID" || { echo "Need PID on the cmdline" > /dev/stderr; exit 1; }
+
+before=`ps -h -p $PID -O rss  | awk '{print $2}'`
+gdb --batch-silent --eval-command 'print malloc_trim(0)' -p $PID
+after=`ps -h -p $PID -O rss  | awk '{print $2}'`
+
+echo "before: $before" | tee -a $1.trim.log
+echo "after: $after" | tee -a $1.trim.log
+echo "freed: $(($before - $after))" | tee -a $1.trim.log

@@ -1,0 +1,3 @@
+#!/bin/bash
+
+sudo strace -o $1.strace.log -p $(pidof $1)

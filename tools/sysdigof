@@ -1,0 +1,4 @@
+#!/bin/bash
+
+outf=$(date +%s)_${1}.scap.gz
+sudo sysdig -z -vv -D -w $outf proc.name=${1}

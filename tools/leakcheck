@@ -1,0 +1,5 @@
+#!/bin/bash
+
+export PATH=$PATH:.
+export MALLOC_TRACE=/tmp/t
+sudo mtrace $*
