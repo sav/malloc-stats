@@ -2,7 +2,7 @@ malloc-stats
 ============
 
 Some very basic malloc stat example. Use the tools to explore malloc behavior
-in each of the test.
+in each testing case.
 
 build
 -----
